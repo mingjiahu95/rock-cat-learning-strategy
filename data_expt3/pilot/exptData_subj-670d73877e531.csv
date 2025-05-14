@@ -1,0 +1,5 @@
+"rt","url","trial_type","trial_index","plugin_version","time_elapsed","subject","condition","success","timeout","failed_images","failed_audio","failed_video","response"
+"3841","consent_form.html","external-html","0","2.0.0","3904","test","3","","","","","",""
+"","","preload","1","2.0.0","4057","test","3","true","false","[]","[]","[]",""
+"30247","","survey","2","2.0.0","34358","test","3","","","","","","{"""":{""Q7"":3,""Q8"":3,""Q9"":3},""survey_intro"":null}"
+"null","","fullscreen","3","2.0.0","35364","test","3","true","","","","",""

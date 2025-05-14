@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
+  <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
+  <script src="csv_read_write.js"></script>
+  <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
+  <link href="custom_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <h1 id="header"></h1>
+
+  <script>
+    const trial = {};
+    // trial.stimulus = [
+    //   {
+    //     category: 'Gneiss',
+    //     images: [
+    //       { 'file_path': 'rock_img/M_Gneiss_01.png', 'width': 800, 'height': 636 },
+    //       { 'file_path': 'rock_img/M_Gneiss_03.png', 'width': 800, 'height': 546 },
+    //       { 'file_path': 'rock_img/M_Gneiss_06.png', 'width': 800, 'height': 752 },
+    //       { 'file_path': 'rock_img/M_Gneiss_08.png', 'width': 800, 'height': 533 },
+    //       { 'file_path': 'rock_img/M_Gneiss_10.png', 'width': 800, 'height': 631 },
+    //       { 'file_path': 'rock_img/M_Gneiss_14.png', 'width': 800, 'height': 560 }
+    //     ],
+    //   },
+    //   {
+    //     category: 'Migmatite',
+    //     images: [
+    //       { 'file_path': 'rock_img/M_Migmatite_01.png', 'width': 800, 'height': 690 },
+    //       { 'file_path': 'rock_img/M_Migmatite_04.png', 'width': 800, 'height': 626 },
+    //       { 'file_path': 'rock_img/M_Migmatite_05.png', 'width': 800, 'height': 493 },
+    //       { 'file_path': 'rock_img/M_Migmatite_07.png', 'width': 800, 'height': 818 },
+    //       { 'file_path': 'rock_img/M_Migmatite_09.png', 'width': 800, 'height': 450 },
+    //       { 'file_path': 'rock_img/M_Migmatite_16.png', 'width': 800, 'height': 618 }
+    //     ],
+    //   },
+    // ];
+    trial.stimulus = [
+      {
+        category: 'Andesite',
+        images: [{ file_path: 'rock_img/I_Andesite_01.jpg', width: 800, height: 587 },
+        { file_path: 'rock_img/I_Andesite_02.jpg', width: 800, height: 850 },
+        { file_path: 'rock_img/I_Andesite_03.jpg', width: 800, height: 573 },
+        { file_path: 'rock_img/I_Andesite_04.jpg', width: 800, height: 596 },
+        { file_path: 'rock_img/I_Andesite_05.jpg', width: 800, height: 412 },
+        { file_path: 'rock_img/I_Andesite_06.jpg', width: 800, height: 684 }]
+      },
+      {
+        category: 'Basalt',
+        images: [{ file_path: 'rock_img/I_Basalt_01.jpg', width: 800, height: 788 },
+        { file_path: 'rock_img/I_Basalt_02.jpg', width: 800, height: 645 },
+        { file_path: 'rock_img/I_Basalt_04.jpg', width: 800, height: 753 },
+        { file_path: 'rock_img/I_Basalt_05.jpg', width: 800, height: 818 },
+        { file_path: 'rock_img/I_Basalt_06.jpg', width: 800, height: 706 },
+        { file_path: 'rock_img/I_Basalt_08.jpg', width: 800, height: 1044 }]
+      },
+    ]
+    trial.practice_mode = false;
+
+    let currentStage = 1;  // Initialize stage 1
+    num_columns = trial.stimulus.length;
+    display_element = document.body;
+    let shrink_factor = 0.5;
+    let time_record = [];
+    let countdownTime = 5;
+
+    function render() {
+      display_element.innerHTML = '';  // Clear the display
+
+      // Initialize the container styles
+      let containerHTML = `<div style="display: flex; flex-direction:column; pad: 0.2cm;">\n`;
+      // let containerHTML = '<div style="display: block">\n';
+
+
+      // Loop over categories and render content based on the current stage
+      for (let categoryObj of trial.stimulus) {
+        let catname_selected = categoryObj.category;
+
+        // Generate the category HTML
+        let categoryHTML = '';
+        if (currentStage == 2) {
+          categoryHTML = '<div style="display: flex; flex-direction: column;">';
+        }
+        categoryHTML += '<div style="display: flex; flex-direction: column; align-self:flex-start; gap: 0.2cm; width:100%;">';
+
+
+        // Add category label
+        categoryHTML += `<div><h3 style="text-align: center; font-size: 0.7cm; margin: 0.05cm">${catname_selected}</h3></div>`
+        categoryHTML += '<div id="image_row" style="display: flex; flex-direction: row; align-self:flex-start; gap: 0.5cm; margin: auto">';
+        // Add images
+        for (let rock of categoryObj.images) {
+          let width_cm = 4.3;//adjust the physical size of rock images
+          let height_cm = width_cm / rock.aspect_ratio;
+          if (currentStage === 2) {
+            width_cm *= shrink_factor;
+            height_cm *= shrink_factor;
+          }
+
+          // Generate the image div HTML
+          categoryHTML += `<img src="${rock.file_path}" style="width: ${width_cm}cm; height: ${height_cm}cm; object-fit: contain;" />\n`;
+        };
+
+        // Add text box in stage 2 and 3
+        if (currentStage > 1) {
+          categoryHTML += `</div>\n`;//close the div for the image column
+          categoryHTML += `<div style="display: flex; flex-direction: row; justify-content: center;">\n`;
+          if (currentStage == 2) {
+            categoryHTML += `<textarea id="rock-input-${catname_selected}" placeholder="Enter response for ${catname_selected}" style="width: 80%; height:3cm"></textarea>\n`;
+          } else {
+            categoryHTML += `<textarea id="rock-input-${catname_selected}" style="width: 80%; height:3cm">Enter response for ${catname_selected}</textarea>\n`;
+          }
+          categoryHTML += `</div>\n`;
+        }
+
+
+        // Append the category HTML to the container
+        containerHTML += categoryHTML + `</div> </div>\n`;
+      };
+
+      // Close the container div
+      containerHTML += `</div>\n`;
+      // console.log(currentStage);
+
+      // Set the container HTML
+      display_element.innerHTML = containerHTML;
+      time_record.push(performance.now());
+
+      // add button at the bottom
+      let buttonText = (trial.practice_mode == true && currentStage == 2) ? 'Click here for an example of description' : 'Next';
+      let text_display_mode = (currentStage > 1) ? 'none' : 'block';
+      let buttonHTML = `<button id="button_trans_stage" class="jspsych-btn-nxt" style="display:none; margin-top: 0.5cm;">${buttonText}</button>`;
+      // let TextHTML = `<p id="text_trans_stage" style="display:${text_display_mode}; font-size:0.8cm; text-align:center; width: 100%;">A button to proceed will appear here in 5 seconds</p>`;
+      let TextHTML = `<p id="text_trans_stage" style="display:${text_display_mode}; font-size:0.8cm; text-align:center; width: 100%;">A button to proceed will appear here in ${countdownTime} seconds</p>`;
+      display_element.innerHTML += `<div style="display:flex;">` + buttonHTML + TextHTML + `</div>`;
+
+      if (currentStage == 1) {
+        let countdownInterval = setInterval(() => {
+          countdownTime--; // Decrement the countdown
+          document.getElementById("text_trans_stage").innerText = `A button to proceed will appear here in ${countdownTime} seconds`;
+
+          if (countdownTime == 0) {
+            clearInterval(countdownInterval); 
+            buttonShow();
+          }
+        }, 1000); // Update every 1 second
+      }
+
+      if (currentStage == 2) {
+        let validWordCount = new Array(num_columns).fill(false);
+
+        for (let i = 0; i < num_columns; i++) {
+          let categoryObj = trial.stimulus[i];
+          let catname_selected = categoryObj.category;
+          let inputElement = document.getElementById(`rock-input-${catname_selected}`);
+
+          // Add event listener to check word count in real-time
+          inputElement.addEventListener('input', function () {
+            let wordCount = inputElement.value.trim().split(/\s+/).filter(word => word.length > 0).length;
+            validWordCount[i] = wordCount > 5;
+
+            // If all inputs have valid word count, show the button
+            if (validWordCount.every(x => x)) {
+              // document.getElementById("text_trans_stage").style.display = "none";
+              // document.getElementById("button_trans_stage").style.display = "block";
+              buttonShow();
+            }
+          });
+        }
+      }
+
+      if (currentStage == 3) {
+        buttonShow();
+      }
+
+      // Add the button at the bottom
+      function buttonShow() {
+        // if (currentStage != 2) {
+          //stage 2 button showup depends on word count
+          document.getElementById("text_trans_stage").style.display = "none";
+          document.getElementById("button_trans_stage").style.display = "block";
+        // }
+        // Add event listener for the button
+        document.getElementById("button_trans_stage").addEventListener("click", function () {
+          time_record.push(performance.now());
+          if (currentStage == 1) {
+            // clearTimeout(timeoutId);
+            currentStage++;
+            render(); // Re-render for stage 2
+          } else if (currentStage == 2 && trial.practice_mode == true) {
+            currentStage++;
+            render(); // Re-render for stage 3
+          } else {
+            // Collect responses and end trial
+            let text_response = {};
+            for (let categoryObj of trial.stimulus) {
+              let catname_selected = categoryObj.category;
+              let inputElement = document.querySelector(
+                `#rock-input-${catname_selected}`
+              );
+              text_response[`text_${catname_selected}`] = inputElement.value;
+            }
+            let trial_data = {
+              ...text_response,
+              time_obs: time_record[1] - time_record[0],
+              time_resp: time_record[2] - time_record[1]
+            };
+            console.log(trial_data);
+          }
+        });
+      };
+
+      // if (currentStage == 1) {
+      //   timeoutId = setTimeout(buttonShow, 3000);//adjust time taken for button to show up
+      // } else {
+      //   buttonShow(); // Ensure button is set up for other stages
+      // }
+
+    }
+    render();
+
+  </script>
+</body>
+
+</html>

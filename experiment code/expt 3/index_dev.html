@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/mathjs@13.1.1/lib/browser/math.js"></script>
+  <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-call-function@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-browser-check@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-instructions@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-external-html@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey@2.0.0"></script>
+  <script src="paired_cat_display_plugin.js"></script>
+  <script src="algorithm_math_helper.js"></script>
+  <script src="utility_functions.js"></script>
+
+  <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/@jspsych/plugin-survey@2.0.0/css/survey.css" rel="stylesheet" type="text/css" />
+  <link href="custom_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 id="header"></h1>
+  <script src="JSON_obj.js"></script>
+  <script src="./Instructions/instructions_html.js"></script>
+  <script>
+    // initialize JsPsych engine
+    var completion_status = "incomplete";
+    const jsPsych = initJsPsych({
+      show_progress_bar: true,
+      on_finish: () => {
+        completion_status = "completed";
+        lastTestData = jsPsych.data.get().filter({
+          cycle: n_cycle,
+          phase: "test",
+          trialType: "class_response",
+        });
+        finalTestAccu = lastTestData.select("corr").mean();
+        let hasBonus = finalTestAccu > 0.8 ? true : false;
+        saveData(completion_status);
+        if (hasBonus) {
+          window.location.assign(
+            "https://app.prolific.com/submissions/complete?cc=CS7Q4UF2"
+          );
+        } else {
+          window.location.assign(
+            "https://app.prolific.com/submissions/complete?cc=COT2M18U"
+          );
+        }
+      },
+      // on_close: () => {
+      //   if (!dataLogged) {
+      //     QuitLog();
+      //     saveData(completion_status);
+      //     dataLogged = true;
+      //     window.location.assign("https://app.prolific.com/submissions/complete?cc=C15JKIPY");
+      //   }
+      // }
+    });
+
+
+    var cond; // 1: GEE, 2:GEA, 3:GCP, 4:CCP
+    // const subjID = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var subjID = jsPsych.randomization.randomID(8);
+
+
+    var pause_data = [];
+    function saveData(completion_status) {
+      var expt_data = jsPsych.data.get().csv();
+      var stim_data = {
+        train: rockInfo_dict_train,
+        test: rockInfo_dict_test,
+      };
+      JSON_obj = JSON.stringify({
+        exptData: expt_data,
+        stimData: stim_data,
+        pauseData: pause_data,
+        status: completion_status,
+        condition: cond,
+        PID: subjID,
+      });
+      navigator.sendBeacon("./save_data.php", JSON_obj);
+    }
+
+    function QuitLog() {
+      navigator.sendBeacon(
+        "./cond_assignment.php",
+        `ACTION=quit&PROLIFIC_PID=${subjID}`
+      );
+    }
+
+    const n_cycle = 4;
+    const cat_names = [
+      "Andesite",
+      "Basalt",
+      "Diorite",
+      "Gabbro",
+      "Obsidian",
+      "Pegmatite",
+      "Peridotite",
+      "Pumice",
+    ];
+    const num_cats = cat_names.length;
+    const num_item_per_catTrain = 6;
+    const num_item_per_catTest = num_item_per_catTrain;
+    const num_Trial_per_blockTest = 24; //48
+    const num_SimTrial_per_blockTrain = 3; //[1, 2].includes(cond) ? undefined : 3
+
+    // create random streams of token indices for the cyclical token sampling scheme
+    let token_idx_seq = [];
+    let idx_item_per_catTrain = math
+      .range(0, num_item_per_catTrain)
+      .toArray();
+    for (i_cat = 0; i_cat < num_cats; i_cat++) {
+      let token_idx_seq_per_cat = [];
+      // have to make token_inx_seq long enough for sampling
+      for (i_rep = 0; i_rep < 10; i_rep++) {
+        token_idx_seq_per_cat = token_idx_seq_per_cat.concat(
+          shuffleList(idx_item_per_catTrain)
+        );
+      }
+      token_idx_seq.push(token_idx_seq_per_cat);
+    }
+
+    // create timeline variables for the sequential trials of CCP/GCP conditions
+    let rockInfo_train_seq = [];
+    let rockInfo_train_sim = [];
+    function setupExpt() {
+      if ([3, 4].includes(cond)) {
+        let token_count_per_cat = [];
+        let token_count_per_cat_cycle = [];
+        for (var i_cycle = 0; i_cycle < n_cycle; i_cycle++) {
+          if (i_cycle % 2 === 0) {
+            token_count_per_cat_cycle = shuffleList([1, 1, 1, 1, 2, 2, 2, 2]);
+          } else {
+            token_count_per_cat_cycle = token_count_per_cat_cycle.map(
+              (cat) => 3 - cat
+            );
+          }
+          token_count_per_cat.push(token_count_per_cat_cycle);
+        }
+
+        for (i_cycle = 0; i_cycle < n_cycle; i_cycle++) {
+          let rockInfo_train_seq_per_cycle = [];
+          for (i_cat = 0; i_cat < num_cats; i_cat++) {
+            cat_idx_count = token_count_per_cat[i_cycle][i_cat];
+            cat_idx_list = token_idx_seq[i_cat].slice(0, cat_idx_count);
+            for (let index of cat_idx_list) {
+              rockInfo_train_seq_per_cycle_token =
+                rockInfo_dict_train[i_cat][index];
+              rockInfo_train_seq_per_cycle.push(
+                rockInfo_train_seq_per_cycle_token
+              );
+            }
+          }
+          rockInfo_train_seq.push(rockInfo_train_seq_per_cycle);
+        }
+      }
+
+      for (i_cat = 0; i_cat < num_cats; i_cat++) {
+        rockInfo_train_sim_per_cat = {
+          category: cat_names[i_cat],
+          images: rockInfo_dict_train[i_cat],
+        };
+        rockInfo_train_sim.push(rockInfo_train_sim_per_cat);
+      }
+    }
+
+
+    var ref_cat_prob, paired_cats_prob, cat_sampling_count;
+    let DF_store = [];
+    let DS_store = [];
+    let CSb_store = [...Array(num_cats)].map(() => []);
+    let DF_prior = [];
+    let DS_prior = [];
+    let CS_prior = [];
+    function evaluateCatPrior() {
+      for (let cat_key of cat_names) {
+        cat_self_dist = confusion_dict
+          .filter((obj) => obj.ref == cat_key && obj.pair == cat_key)
+          .map((obj) => obj.distance)[0];
+        cats_other_sim = confusion_dict
+          .filter((obj) => obj.ref != cat_key && obj.pair == cat_key)
+          .map((obj) => obj.similarity);
+        cat_other_sim = math.mean(cats_other_sim);
+        resps_sim = confusion_dict
+          .filter((obj) => obj.ref == cat_key)
+          .map((obj) => (obj.pair == cat_key ? 0 : obj.similarity));
+        resps_sim = math.divide(resps_sim, math.sum(resps_sim));
+
+        DF_prior.push(cat_self_dist - cat_other_sim);
+        DS_prior.push(cat_self_dist);
+        CS_prior.push(resps_sim);
+      }
+      DF_prior = math.divide(DF_prior, math.sum(DF_prior));
+      DS_prior = math.divide(DS_prior, math.sum(DS_prior));
+      return { DF_prior, DS_prior, CS_prior };
+    }
+    function evaluateSamplingCounts(data) {
+      let categories = data.select("cat").values;
+      let responses = data.select("resp").values;
+      OPS = calcClassScore(categories, responses, undefined, cat_names).OPS;
+      DF = OPS.map((i) => 1 - i + 1 / 8);
+      DF_store.push(DF);
+      CDF = calcWgtAverage(DF_store, 0.5); //[DF_prior, ...DF_store]
+      cat_sampling_prop = math.divide(CDF, math.sum(CDF));
+      num_SeqTrial_per_blockTrain = [1, 2].includes(cond)
+        ? 48
+        : 48 - num_SimTrial_per_blockTrain * num_item_per_catTrain * 2;
+      cat_sampling_count = prop_to_count(
+        cat_sampling_prop,
+        num_SeqTrial_per_blockTrain
+      );
+      return cat_sampling_count;
+    }
+    function evaluateSelectionProbs(data) {
+      let categories = data.select("cat").values;
+      let responses = data.select("resp").values;
+      HS = calcClassScore(categories, responses, undefined, cat_names).HS;
+      DS = HS.map((i) => 1 - i + 1 / 8);
+      DS_store.push(DS);
+      CDS = calcWgtAverage(DS_store, 0.5);
+      ref_cat_prob = math.divide(CDS, math.sum(CDS)); //.......
+      let paired_cats_prob = new Array(num_cats).fill(null);
+      // iterate through all possible reference categories
+      for (let i_cat = 0; i_cat < num_cats; i_cat++) {
+        ref_cat = cat_names[i_cat];
+        //categories and responses should consist of name strings
+        CSb_cat = calcClassScore(
+          categories,
+          responses,
+          ref_cat,
+          cat_names
+        ).CS;
+        CS0_cat = CS_prior[i_cat];
+        CSb_store[i_cat].push(CSb_cat); //8 ref_cat x 5 cycle x 8 pair_cat
+        CCS_cat = calcWgtAverage([CS0_cat, ...CSb_store[i_cat]], 0.5); // this step sets self-similarity to undefined
+        CCS_cat_sum = math.sum(CCS_cat.filter((ccs) => ccs));
+        paired_cats_prob[i_cat] = CCS_cat.map((ccs) =>
+          ccs ? ccs / CCS_cat_sum : ccs
+        ); //keep self-sim undefined
+      }
+      return { ref_cat_prob, paired_cats_prob };
+    }
+    function evaluateCatPairing(ref_cat_prob, paired_cats_prob) {
+      let cat_pairing_dict = [];
+      for (let i = 0; i < num_cats; i++) {
+        for (let j = 0; j < num_cats; j++) {
+          if (paired_cats_prob[i] && paired_cats_prob[i][j]) {
+            let sym_pair_exist = cat_pairing_dict.some(
+              (obj) => obj.ref_idx == j && obj.pair_idx == i
+            );
+            if (sym_pair_exist) {
+              sym_pair_index = cat_pairing_dict.findIndex(
+                (obj) => obj.ref_idx == j && obj.pair_idx == i
+              );
+              cat_pairing_dict[sym_pair_index].prob +=
+                ref_cat_prob[i] * paired_cats_prob[i][j];
+            } else {
+              cat_pairing_dict.push({
+                ref_idx: i,
+                pair_idx: j,
+                prob: ref_cat_prob[i] * paired_cats_prob[i][j],
+              });
+            }
+          }
+        }
+      }
+      pairing_idx_list = getTopKIndices(
+        cat_pairing_dict.map((pair) => pair.prob),
+        num_SimTrial_per_blockTrain
+      );
+      ref_idx_list = pairing_idx_list.map(
+        (idx) => cat_pairing_dict[idx].ref_idx
+      );
+      pair_idx_list = pairing_idx_list.map(
+        (idx) => cat_pairing_dict[idx].pair_idx
+      );
+      return { ref_idx_list, pair_idx_list };
+    }
+
+    //remember to add instruction images
+    const preload = {
+      type: jsPsychPreload,
+      images: [
+        ...rockInfo_dict.map((rockInfo) => rockInfo.name),
+        ...instructions_image,
+      ],
+    };
+
+    // declare the block.
+    const read_consent = {
+      type: jsPsychExternalHtml,
+      url: "consent_form.html",
+      cont_btn: "start",
+      check_fn: () => {
+        if (document.getElementById("consent_no").checked == true) {
+          window.location.assign(
+            "https://app.prolific.com/submissions/complete?cc=C17NAMY6"
+          );
+          return false;
+        } else if (document.getElementById("consent_yes").checked == true) {
+          return true;
+        }
+        return false;
+      },
+    };
+
+    var exptPaused = false;
+    var validExitFullscreen = false;
+    var first_attempt = true;
+    var exptStarted = false;
+    var quitProcessed = false;
+    var pause_start, pause_end;
+    function process_on_quit() {
+      if (!quitProcessed) {
+        QuitLog();
+        saveData(completion_status);
+        quitProcessed = true;
+        window.location.assign("https://app.prolific.com/submissions/complete?cc=C15JKIPY");
+      }
+    }
+    window.addEventListener('resize', () => {
+      let height_diff = Math.abs(window.innerHeight - window.screen.height);
+      let width_diff = Math.abs(window.innerWidth - window.screen.width);
+      let fullscreen_status = (height_diff <= 5 && width_diff <= 5) ? true : false;
+      fullscreen_status = document.fullscreenElement || fullscreen_status;
+      if (fullscreen_status && exptPaused && exptStarted) {
+        console.log('re-enter full screen mode');
+        document.getElementById('fullscreen-message')?.remove();
+        jsPsych.resumeExperiment();
+        pause_end = performance.now();
+        pause_data.push(pause_end - pause_start);
+        exptPaused = false;
+        first_attempt = true;
+      } else if (!fullscreen_status && !validExitFullscreen && first_attempt && exptStarted) {
+        console.log('quit full screen mode');
+        jsPsych.pauseExperiment();
+        exptPaused = true;
+        first_attempt = false;
+        pause_start = performance.now();
+        fullscrHTML = '<div id="fullscreen-message">';
+        fullscrHTML += '<p>You WILL NOT be paid if you leave this page!</p>';
+        fullscrHTML += '<button id="resume_btn" class="jspsych-btn-nxt" style="transform: scale(0.7); margin: 0;">Click here to go back to the experiment</button>';
+        fullscrHTML += '<button id="quit_btn" class="jspsych-btn-nxt" style="transform: scale(0.7); margin: 0;">Click here to quit the experiment</button>';
+        fullscrHTML += '</div>';
+        document.body.insertAdjacentHTML('beforeend', fullscrHTML);
+        window.onpagehide = (event) => {
+          if (event.persisted) {
+            process_on_quit();
+          }
+        };
+        document.onvisibilitychange = () => {
+          if (document.hidden) {
+            process_on_quit();
+          }
+        };
+        document.getElementById("resume_btn").onclick = () => {
+          requestFullscreen_all_browsers();
+        };
+        document.getElementById("quit_btn").onclick = () => {
+          process_on_quit();
+        };
+      }
+    });
+
+    const enter_fullScreen = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true,
+      on_finish: () => {
+        exptStarted = true;
+        // alert(`height:${window.innerHeight}/${window.screen.height}; width:${window.innerWidth}/${window.screen.width}`);
+      },
+    };
+
+    const exit_fullScreen = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: false,
+      on_start: () => {
+        validExitFullscreen = true;
+      },
+      on_finish: () => {
+        validExitFullscreen = false;
+      },
+    };
+
+    var rockInfo_dict_test, rockInfo_dict_train;
+    const fetch_data_trial = {
+      type: jsPsychCallFunction,
+      func: async function fetchData() {
+        const response = await fetch("cond_assignment.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `ACTION=fetch&PROLIFIC_PID=${subjID}`,
+        });
+        const data = await response.json();
+        rockInfo_dict_train = data.train;
+        rockInfo_dict_test = data.test;
+        cond = data.cond;
+        console.log('cond:', cond);
+        jsPsych.data.addProperties({ subjID: subjID, condition: cond });
+        setupExpt();
+      }
+    }
+
+    // var ref_cat_index, paired_cat_index, testCycleData;
+    const show_pre_test_instruction = {
+      type: jsPsychInstructions,
+      pages: pre_test_instruction,
+      button_label_next: "Next",
+      button_label_previous: "Back",
+      show_clickable_nav: true,
+      css_classes: ["instruction-content"],
+    };
+
+    const show_test_instruction = {
+      timeline: [
+        {
+          type: jsPsychInstructions,
+          pages: test_instruction,
+          button_label_next: "Next",
+          button_label_previous: "Back",
+          show_clickable_nav: true,
+          css_classes: ["instruction-content"],
+        },
+      ],
+      conditional_function: function () {
+        if (i_cycle > 0) {
+          return false;
+        } else {
+          return true;
+        }
+      },
+    };
+
+    const show_train_seq_instruction = {
+      timeline: [
+        {
+          type: jsPsychInstructions,
+          pages: () => {
+            if ([1, 2].includes(cond)) {
+              return train_seq_instruction_cond12;
+            } else if ([3, 4].includes(cond)) {
+              return train_seq_instruction_cond34;
+            }
+          },
+          button_label_next: "Next",
+          button_label_previous: "Back",
+          show_clickable_nav: true,
+          css_classes: ["instruction-content"],
+        },
+      ],
+      conditional_function: function () {
+        if (i_cycle > 0) {
+          return false;
+        } else {
+          return true;
+        }
+      },
+    };
+
+    const show_train_sim_instruction = {
+      timeline: [
+        {
+          type: jsPsychInstructions,
+          pages: () => {
+            if (cond == 3) {
+              return train_sim_instruction_cond3;
+            } else if (cond == 4) {
+              return train_sim_instruction_cond4;
+            } else {
+              return null
+            }
+          },
+          button_label_next: "Next",
+          button_label_previous: "Back",
+          show_clickable_nav: true,
+          css_classes: ["instruction-content"],
+        },
+      ],
+      conditional_function: function () {
+        if (i_cycle > 0) {
+          return false;
+        } else {
+          return true;
+        }
+      },
+    };
+
+    const start_pre_test = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: "",
+      choices: () => [`Click to start the Pre-Test Phase`],
+      button_html: (choice) =>
+        `<button class="jspsych-btn-nxt" style="font-size:20px">${choice}</button>`,
+      prompt:
+        '<p style="font-size:20px; width:20cm; text-align: center;">Your performance WILL NOT be recorded by the computer</p>',
+      on_finish: function (data) {
+        data.trialType = "start_test";
+      },
+    };
+
+    const start_train_seq = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: "",
+      choices: () => [
+        `Click to start the Training Phase of Learning Cycle ${i_cycle + 1}`
+      ],
+      button_html: (choice) =>
+        `<button class="jspsych-btn-nxt" style="font-size:20px">${choice}</button>`,
+      prompt:
+        '<p style="font-size:20px; width:20cm; text-align: center;">Your performance WILL NOT be recorded by the computer</p>',
+      on_finish: function (data) {
+        data.trialType = "start_train";
+      },
+    };
+
+    const start_train_sim = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: "",
+      choices: () => [
+        `Click to start the second part of the Training Phase`,
+      ],
+      button_html: (choice) =>
+        `<button class="jspsych-btn-nxt" style="font-size:20px">${choice}</button>`,
+      prompt: function () {
+        let prompt = '<p style="font-size:20px; width:20cm; text-align: center;">Your performance WILL NOT be recorded by the computer';
+        if (cond == 4) {
+          prompt += ", so you may want to use this opportunity to explore difficult and confusing rock types";
+        }
+        prompt += "</p>";
+      },
+      on_finish: function (data) {
+        data.trialType = "start_train";
+      },
+    };
+
+    const start_test = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: "",
+      choices: () => [
+        `Click to start the Test Phase of Learning Cycle ${i_cycle + 1}`,
+      ],
+      button_html: (choice) =>
+        `<button class="jspsych-btn-nxt" style="font-size:20px">${choice}</button>`,
+      prompt:
+        '<p style="font-size:20px; width:20cm; text-align: center;">Your performance WILL be recorded by the computer</p>',
+      on_finish: function (data) {
+        data.trialType = "start_test";
+      },
+    };
+
+    var ref_cat_index, paired_cat_index
+    const cat_selection = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: function () {
+        let prompt_text = "";
+        if (cond == 3) {
+          prompt_text =
+            "Based on your test performance, here are two categories you may have difficulty with:";
+        } else if (cond == 4) {
+          prompt_text =
+            "Choose a category that you find most difficult to identify:";
+        }
+        return `<p id="stimulus-text">${prompt_text}</p>`;
+      },
+      choices: cat_names,
+      button_html: (choice) =>
+        `<button class="jspsych-btn-cats">${choice}</button>`,
+      prompt: () =>
+        cond == 3
+          ? '<button class="jspsych-btn-nxt" id="btn_nxt_cat_select">Next</button>'
+          : null,
+      grid_rows: 2,
+      grid_columns: 4,
+      response_ends_trial: false,
+      on_load: function () {
+        var buttons = document.getElementsByClassName("jspsych-btn-cats");
+        if (cond == 3) {
+          let time_start = performance.now();
+          ref_cat_index = ref_idx_list[trial_idx_cycle];
+          paired_cat_index = pair_idx_list[trial_idx_cycle];
+          for (let button_idx = 0; button_idx < num_cats; button_idx++) {
+            button = buttons[button_idx];
+            if ([ref_cat_index, paired_cat_index].includes(button_idx)) {
+              button.classList.add("clicked");
+            } else {
+              button.classList.add("inactive");
+            }
+          }
+          let btn_next = document.getElementById("btn_nxt_cat_select");
+          btn_next.addEventListener("click", function () {
+            time_end = performance.now();
+            jsPsych.finishTrial({
+              ref_cat_num: ref_cat_index + 1,
+              paired_cat_num: paired_cat_index + 1,
+              time_obs: time_end - time_start,
+            });
+          });
+        }
+        if (cond == 4) {
+          let time_record = [performance.now()];
+          let responses = [];
+          let clickCount = 0;
+          for (let button of buttons) {
+            // Add event listener to each button
+            button.addEventListener("click", function () {
+              [...buttons].forEach((button) => (button.disabled = false)); //override default behavior of jsPsych
+              let btn_idx = this.getAttribute("data-choice");
+              btn_idx = parseInt(btn_idx);
+              if (!this.classList.contains("clicked")) {
+                responses.push(btn_idx);
+                time_record.push(performance.now());
+                this.classList.add("clicked");
+                document.getElementById(
+                  "stimulus-text"
+                ).innerHTML = `Choose the category that is most easily confused with ${cat_names[btn_idx]}:`;
+                clickCount++;
+              }
+              if (clickCount == 2) {
+                jsPsych.finishTrial({
+                  rt_ref: time_record[1] - time_record[0],
+                  rt_paired: time_record[2] - time_record[1],
+                  ref_cat_num: responses[0] + 1,
+                  paired_cat_num: responses[1] + 1,
+                });
+              }
+            });
+          }
+        }
+      },
+      on_finish: function (data) {
+        data.trialType = "cat_selection";
+        data.trial = trial_idx_cycle + 1;
+        data.ref_cat = cat_names[ref_cat_index];
+        data.paired_cat = cat_names[paired_cat_index];
+        if (cond == 3) {
+          data.ref_prob_dist = ref_cat_prob;
+          data.paired_prob_dist = paired_cats_prob[ref_cat_index];
+        }
+      },
+    };
+
+    const paired_cat_display = {
+      type: jsPsychPairedCatDisplay,
+      stimulus: null,
+      on_start: function (trial) {
+        lastTrialData = jsPsych.data.getLastTrialData();
+        ref_cat_index = lastTrialData.select("ref_cat_num").values[0] - 1;
+        paired_cat_index =
+          lastTrialData.select("paired_cat_num").values[0] - 1;
+        trial.stimulus = [
+          rockInfo_train_sim[ref_cat_index],
+          rockInfo_train_sim[paired_cat_index],
+        ];
+      },
+      on_finish: function (data) {
+        data.trial = trial_idx_cycle + 1;
+        trial_idx_cycle++;
+        data.trialType = "paired_cat_display";
+      },
+    };
+
+    var rockInfo;
+    const class_response = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: () => {
+        rockInfo = timeline_vars_seq_cycle[trial_idx_cycle];
+        html =
+          `<img src= "${rockInfo.file_path}"` +
+          ` style="width:${rockInfo.width_cm}cm; height:${rockInfo.height_cm}cm;">` +
+          "<p>What type of rock is this?</p>";
+        return html;
+      },
+      choices: cat_names,
+      button_html: (choice) =>
+        `<button class="jspsych-btn-cats">${choice}</button>`,
+      grid_rows: 2,
+      grid_columns: 4,
+      on_finish: (data) => {
+        data.trialType = "class_response";
+        data.trial = trial_idx_cycle + 1;
+        data.resp = cat_names[data.response];
+        data.rt = data.rt;
+        rock_file_path = rockInfo.file_path;
+        data.cat = extract_rock_info(rock_file_path)["type"];
+        data.token = extract_rock_info(rock_file_path)["token"];
+        data.corr = data.cat == data.resp;
+        data.resp_num = cat_names.indexOf(data.resp) + 1;
+        data.cat_num = cat_names.indexOf(data.cat) + 1;
+      },
+    };
+
+    const corr_feedback = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: function () {
+        var feedbackHTML = `<img src= ${rockInfo.file_path} style="width:${rockInfo.width_cm}cm; height:${rockInfo.height_cm}cm;">`;
+        var last_trial_correct = jsPsych.data
+          .getLastTrialData()
+          .select("corr").values[0];
+        var last_trial_cat = jsPsych.data.getLastTrialData().select("cat")
+          .values[0];
+        if (last_trial_correct) {
+          feedbackHTML +=
+            "<p style='font-size: 30px; color: green;'><strong>Correct!</strong></p>";
+        } else {
+          feedbackHTML +=
+            "<p style='font-size: 30px; color: red;'><strong>Incorrect!</strong></p>";
+        }
+        feedbackHTML +=
+          "<p style='font-size: 30px;'><strong>This rock is " +
+          last_trial_cat.toLowerCase() +
+          "</strong></p>";
+        return feedbackHTML;
+      },
+      choices: ["Next"],
+      button_html: (choice) =>
+        `<button class="jspsych-btn-nxt">${choice}</button>`,
+      on_finish: function (data) {
+        data.trialType = "corr_feedback";
+        data.trial = trial_idx_cycle + 1;
+        trial_idx_cycle++;
+      },
+    };
+
+    const neutral_feedback = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "<p style='font-size: 30px;'><strong>Okay</strong></p>",
+      choices: "NO_KEYS",
+      trial_duration: 500, //1000
+      on_finish: function (data) {
+        data.trialType = "neutral_feedback";
+        data.trial = trial_idx_cycle + 1;
+        trial_idx_cycle++;
+      },
+    };
+
+    var ref_cats_idx, testCycleData;
+    const cycle_feedback = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: function () {
+        let accuracy = cat_names.map((cat_key) =>
+          testCycleData.filter({ cat: cat_key }).select("corr").mean()
+        );
+        ref_cats_idx = getBotKIndices(accuracy, 3);
+        let fbHTML1 =
+          '<div id="stimulus-cycle-feedback">' +
+          '<table id="stimulus-cycle-feedback" style="width:8cm; text-align:center; border-collapse:collapse;">' +
+          '<caption style="font-weight:bold; margin-bottom:15px; width = 6cm">Table for Classification Accuracy</caption><br>' +
+          "<tbody>";
+        for (i_cat = 0; i_cat < num_cats; i_cat++) {
+          accuracy_prc = math.round(accuracy[i_cat] * 100, 2);
+          fbHTML1 += `<tr><td>${cat_names[i_cat]}</td><td>${accuracy_prc}%</td></tr>`;
+        }
+        fbHTML1 += "</tbody></table><br><br><br>";
+        fbHTML1 += "</div>";
+        return fbHTML1;
+        console.log("finish stimulus definition for cycle_fb.");
+      },
+      choices: ["Next"],
+      button_html: (choice) =>
+        `<button id="next-btn-cycle-feedback" class="jspsych-btn-nxt">${choice}</button>`,
+      response_ends_trial: false,
+      on_load: function () {
+        let time_record = [performance.now()];
+        let firstClick = true;
+        nxt_btn_cycle_fb = document.getElementById(
+          "next-btn-cycle-feedback"
+        );
+        nxt_btn_cycle_fb.addEventListener("click", function () {
+          time_record.push(performance.now());
+          nxt_btn_cycle_fb.disabled = false; //override default behavior of jsPsych
+          let fbHTML2 =
+            "<p>During the test, you tend to confuse the following rock categories:</p><br>";
+          if (firstClick) {
+            for (let i_cat_ref of ref_cats_idx) {
+              cat_ref = cat_names[i_cat_ref];
+              let count_cats = cat_names.map((cat_key) =>
+                cat_key == cat_ref
+                  ? null
+                  : testCycleData
+                    .filter({ cat: cat_ref, resp: cat_key })
+                    .count()
+              );
+              let paired_cats_idx = getTopKIndices(count_cats, 3);
+              cats_paired = paired_cats_idx.map(
+                (index) => cat_names[index]
+              );
+              num_times = (num) =>
+                num > 1 ? `${num} times` : `${num} time`;
+              let nonZeroConfusions = paired_cats_idx
+                .map((index) => ({ index, count: count_cats[index] }))
+                .filter((item) => item.count > 0);
+              // Construct the feedback message for non-zero confusions
+              if (nonZeroConfusions.length > 0) {
+                const confusionsText = nonZeroConfusions
+                  .map((item, i) => {
+                    const cat_name = cat_names[item.index].toLowerCase();
+                    if (i == 0) {
+                      return `${cat_ref.toLowerCase()} as ${cat_name} ${num_times(
+                        item.count
+                      )}`;
+                    } else {
+                      return `as ${cat_name} ${num_times(item.count)}`;
+                    }
+                  })
+                  .join(", ")
+                  .replace(/, ([^,]*)$/, " and $1");
+
+                fbHTML2 += `<p>You misclassified ${confusionsText}.</p>`;
+              }
+            }
+            document.getElementById("stimulus-cycle-feedback").innerHTML =
+              fbHTML2;
+            this.innerText = "Click here to start the next cycle";
+            firstClick = false;
+          } else {
+            let trial_data = {
+              time_fb1: time_record[1] - time_record[0],
+              time_fb2: time_record[2] - time_record[1],
+              trialType: "cycle_feedback",
+            };
+            i_cycle++; //increment cycle at the end of each learning cycle
+            jsPsych.finishTrial(trial_data);
+          }
+        });
+      },
+    };
+
+    const init_algorithm = {
+      type: jsPsychCallFunction,
+      func: function () {
+        ({ DF_prior, DS_prior, CS_prior } = evaluateCatPrior());
+        preTestData = jsPsych.data.get().filter({
+          cycle: 0,
+          phase: "test",
+          trialType: "class_response",
+        });
+        cat_sampling_count = evaluateSamplingCounts(preTestData);
+        ({ ref_cat_prob, paired_cats_prob } =
+          evaluateSelectionProbs(preTestData));
+        ({ ref_idx_list, pair_idx_list } =
+          evaluateCatPairing(ref_cat_prob, paired_cats_prob));
+      },
+    };
+
+    var timeline_vars_seq_cycle, trial_idx_cycle;
+    const train_seq_cycle_cond12 = {
+      timeline: [class_response, corr_feedback],
+      repetitions: 48,
+      data: () => {
+        return {
+          cycle: i_cycle + 1,
+          phase: "train",
+        };
+      },
+      on_timeline_start: function () {
+        trial_idx_cycle = 0;
+        if (cond == 1) {
+          timeline_vars_seq_cycle = rockInfo_dict_train.flat();
+        } else if (cond == 2) {
+          timeline_vars_seq_cycle = [];
+          for (i_cat = 0; i_cat < num_cats; i_cat++) {
+            cat_idx_count = cat_sampling_count[i_cat];
+            cat_idx_list = token_idx_seq[i_cat].splice(0, cat_idx_count);
+            for (let index of cat_idx_list) {
+              timeline_vars_seq_token = rockInfo_dict_train[i_cat][index];
+              timeline_vars_seq_cycle.push(timeline_vars_seq_token);
+            }
+          }
+        }
+        timeline_vars_seq_cycle = shuffleList(timeline_vars_seq_cycle);
+        console.log('n_rep:', this.repetitions);
+        console.log('timeline_vars:', timeline_vars_seq_cycle);
+      },
+      conditional_function: function () {
+        return [1, 2].includes(cond);
+      }
+    };
+
+    const train_seq_cycle_cond34 = {
+      timeline: [class_response, corr_feedback],
+      repetitions: 12,
+      data: () => {
+        return {
+          cycle: i_cycle + 1,
+          phase: "train",
+        };
+      },
+      on_timeline_start: function () {
+        trial_idx_cycle = 0;
+        timeline_vars_seq_cycle = rockInfo_train_seq[i_cycle];
+        timeline_vars_seq_cycle = shuffleList(timeline_vars_seq_cycle);
+        console.log('n_rep:', this.repetitions);
+        console.log('timeline_vars:', timeline_vars_seq_cycle);
+      },
+      conditional_function: function () {
+        return [3, 4].includes(cond);
+      }
+    };
+
+
+    const train_sim_cycle = {
+      timeline: [cat_selection, paired_cat_display],
+      repetitions: num_SimTrial_per_blockTrain,
+      data: function () {
+        return {
+          cycle: i_cycle + 1,
+          phase: "train",
+        };
+      },
+      on_timeline_start: function () {
+        trial_idx_cycle = 0;
+      }
+    };
+
+    var testCycleData;
+    const test_seq_cycle = {
+      timeline: [class_response, neutral_feedback],
+      repetitions: num_Trial_per_blockTest,
+      data: function () {
+        return {
+          cycle: i_cycle + 1,
+          phase: "test",
+        };
+      },
+      on_timeline_start: () => {
+        trial_idx_cycle = 0;
+        timeline_vars_seq_cycle = rockInfo_dict_test.map((cat_dict) =>
+          cat_dict.slice(0, 3)
+        );
+        timeline_vars_seq_cycle = shuffleList(
+          timeline_vars_seq_cycle.flat()
+        );
+        // timeline_vars_seq_cycle = shuffleList(rockInfo_dict_test.flat());
+      },
+      on_timeline_finish: () => {
+        // update performance metrics for the current test cycle
+        testCycleData = jsPsych.data.get().filter({
+          cycle: i_cycle + 1, // i_cycle starts at 0 but cycle starts at 1
+          phase: "test",
+          trialType: "class_response",
+        });
+        cat_sampling_count = evaluateSamplingCounts(testCycleData); //cond == 2
+        ({ ref_cat_prob, paired_cats_prob } =
+          evaluateSelectionProbs(testCycleData)); // cond == 3
+        ({ ref_idx_list, pair_idx_list } = evaluateCatPairing(
+          ref_cat_prob,
+          paired_cats_prob
+        ));
+      },
+    };
+
+    const pre_test_block = {
+      timeline: [class_response, neutral_feedback],
+      repetitions: num_Trial_per_blockTest,
+      data: function () {
+        return {
+          cycle: 0,
+          phase: "test",
+        };
+      },
+      on_timeline_start: function () {
+        trial_idx_cycle = 0;
+        timeline_vars_seq_cycle = rockInfo_dict_test.map((cat_dict) =>
+          cat_dict.slice(0, 3)
+        );
+        timeline_vars_seq_cycle = shuffleList(
+          timeline_vars_seq_cycle.flat()
+        );
+        // timeline_vars_seq_cycle = shuffleList(rockInfo_dict_test.flat());
+      },
+    };
+
+    let main_loop_timeline = [];
+    main_loop_timeline.push(
+      show_train_seq_instruction,
+      start_train_seq,
+      train_seq_cycle_cond12,
+      train_seq_cycle_cond34,
+    );
+    const instructions_paired_cat = {
+      timeline: [show_train_sim_instruction, start_train_sim, train_sim_cycle],
+      conditional_function: function () {
+        return [3, 4].includes(cond);
+      }
+    };
+    main_loop_timeline.push(
+      instructions_paired_cat,
+      show_test_instruction,
+      start_test,
+      test_seq_cycle,
+      cycle_feedback
+    );
+
+    const main_loop = {
+      timeline: main_loop_timeline,
+      repetitions: n_cycle,
+    };
+
+    const post_expt_survey = {
+      type: jsPsychSurvey,
+      survey_json: survey_JSON,
+    };
+
+    i_cycle = 0;
+    init_timeline = [
+      read_consent,
+      enter_fullScreen,
+      fetch_data_trial,
+      preload,
+      show_pre_test_instruction,
+      start_pre_test,
+      pre_test_block,
+      init_algorithm,
+      main_loop,
+      post_expt_survey,
+      exit_fullScreen,
+    ];
+
+    jsPsych.run(init_timeline);
+
+  </script>
+</body>
+
+</html>

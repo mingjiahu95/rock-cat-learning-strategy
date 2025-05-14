@@ -1,0 +1,6 @@
+"width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","trial_type","trial_index","plugin_version","time_elapsed","subjID","condition","stimID","rt","url","success","value","timeout","failed_images","failed_audio","failed_video"
+"1366","599","true","chrome","127.0.0","false","Windows 10","true","60.33","true","true","browser-check","0","2.0.0","1012","67364410628f9ca5ea1ae1c2","4","7","","","","","","","",""
+"","","","","","","","","","","","external-html","1","2.0.0","56167","67364410628f9ca5ea1ae1c2","4","7","54779","consent_form.html","","","","","",""
+"","","","","","","","","","","","fullscreen","2","2.0.0","2262460","67364410628f9ca5ea1ae1c2","4","7","2205279","","true","","","","",""
+"","","","","","","","","","","","call-function","3","2.0.0","2262466","67364410628f9ca5ea1ae1c2","4","7","","","","{}","","","",""
+"","","","","","","","","","","","preload","4","2.0.0","2276919","67364410628f9ca5ea1ae1c2","4","7","","","true","","false","[]","[]","[]"

@@ -1,0 +1,8 @@
+Welcome!\n\nThank you for participating in our experiment!
+In this experiment you will learn to\nidentify 8 different kinds of rocks,\nlike obsidian, pumice, etc.
+On each trial, you will start by seeing\na grid of rocks, like below.
+Then you will see an enlarged picture of the rock, with\nbuttons on the screen with the different types, like below.
+Make your best guess at identifying the rock by clicking one\nof the buttons. After you make your selection, the computer\nwill tell you the correct answer.
+At first you will be guessing, but by paying\nattention to the rocks and the correct answers\nprovided by the computer, you should gradually\nlearn to classify rocks.
+After each of the training blocks that we\njust described, you will be tested on\nwhat you have learned in a test block. We will\nexplain the test blocks after you complete\nyour first training block.\n\nThe experiment consists of 9 cycles of\ntraining and test blocks,\nwith 16 trials per each block.
+Your goal is to learn to correctly classify the\nrocks into as many of the 8 types\nas you can during the TEST blocks.\n\n\nIf you have any questions, you should ask\nthe experimenter now.

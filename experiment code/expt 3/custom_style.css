@@ -1,0 +1,88 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+::-webkit-scrollbar {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
+ 
+#jspsych-html-button-response-stimulus, 
+#jspsych-html-keyboard-response-stimulus, 
+#jspsych-progressbar-container {
+  user-select: none; 
+  cursor: default;   
+}
+#jspsych-html-button-response-stimulus, 
+#jspsych-html-keyboard-response-stimulus {
+  margin-top: -1.3cm; /* Move stimulus upwards by 1.3cm */
+}
+
+.instruction-content {
+  text-align: center;
+  max-width: 1000px;
+  user-select: none;
+  cursor: default;
+}
+
+#fullscreen-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 10, 10, 0.8);
+  color: white;
+  font-size: 24px;
+  z-index: 9999;  /* Ensures it overlays everything */
+}
+
+.jspsych-btn-cats {
+  margin: 0.25cm;
+  width: 4cm;
+  height: 1.3cm;
+  background-color: white;
+  border: 0.05cm solid black;
+  transition: background-color 0.3s;
+  user-select: none; 
+  cursor: default;
+}
+.jspsych-btn-cats:hover, .jspsych-btn-cats.clicked {
+  background-color: red;
+  color: white;
+}
+.jspsych-btn-cats.clicked {
+  opacity: 0.7;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+.jspsych-btn-cats.inactive {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+.jspsych-btn-nxt {
+  display: block; /* Ensures block-level behavior for centering */
+  margin: auto; /* Centers the button horizontally */
+  margin-top: 0.4cm; 
+  position: relative; 
+  bottom: 0.3cm; /* Moves the button slightly up */
+  text-align: center; 
+  
+  font-size: 1cm; 
+  cursor: pointer; 
+  padding: 10px 20px; /* Adds padding to make the button larger */
+  border-radius: 8px; /* Rounds the button edges */
+  border: 2px solid black; /* Removes the default button border */
+  background-color: lightgray; 
+  color: black; /* Text color */
+  user-select: none; 
+}
+
+.jspsych-btn-nxt:hover {
+  background-color: darkgray; 
+}

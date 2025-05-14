@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/mathjs@13.1.1/lib/browser/math.js"></script>
+  <script src="algorithm_math_helper.js"></script>
+  <script src="utility_functions.js"></script>
+</head>
+
+<body>
+  <h1 id="header"></h1>
+  <script src="JSON_obj.js"></script>
+  <script>
+    const cat_names = ["Andesite", "Basalt", "Diorite", "Gabbro", "Obsidian", "Pegmatite", "Peridotite", "Pumice"];
+    const num_cats = cat_names.length;
+    const num_SeqTrial_per_blockTrain = 48;
+    const num_SimTrial_per_blockTrain = 3;
+
+    var DS_store = [];
+    var CSb_store = [...Array(num_cats)].map(() => []);
+    var DF_prior = [];
+    var DS_prior = [];
+    var CS_prior = [];
+    function evaluateCatPrior() {
+
+        for (let cat_key of cat_names) {
+          cat_self_dist = confusion_dict.filter(obj => obj.ref == cat_key && obj.pair == cat_key)
+            .map(obj => obj.distance)[0];
+          cats_other_sim = confusion_dict.filter(obj => obj.ref != cat_key && obj.pair == cat_key)
+            .map(obj => obj.similarity);
+          cat_other_sim = math.mean(cats_other_sim);
+          resps_sim = confusion_dict.filter(obj => obj.ref == cat_key)
+            .map(obj => (obj.pair == cat_key) ? 0 : obj.similarity);
+          resps_sim = math.divide(resps_sim, math.sum(resps_sim));
+
+          DF_prior.push(cat_self_dist - cat_other_sim);
+          DS_prior.push(cat_self_dist);
+          CS_prior.push(resps_sim);
+        }
+        DF_prior = math.divide(DF_prior, math.sum(DF_prior));
+        DS_prior = math.divide(DS_prior, math.sum(DS_prior));
+        return { DF_prior, DS_prior, CS_prior }
+      }
+
+    function evaluateSelectionProbs(categories,responses) {
+      HS = calcClassScore(categories, responses, undefined, cat_names).HS;
+      DS = HS.map(i => 1 - i + 1 / 8);
+      DS_store.push(DS);
+      CDS = calcWgtAverage(DS_store, 0.5);
+      ref_cat_prob = NormalizeTopK(CDS, 3);
+      let paired_cats_prob = new Array(num_cats).fill(null);
+      // iterate through all possible reference categories
+      for (let i_cat = 0; i_cat < num_cats; i_cat++) {
+        ref_cat = cat_names[i_cat];
+        CSb_cat = calcClassScore(categories, responses, ref_cat, cat_names).CS;
+        CS0_cat = CS_prior[i_cat];
+        CSb_store[i_cat].push(CSb_cat);//8 ref_cat x 5 cycle x 8 pair_cat
+        CCS_cat = calcWgtAverage([CS0_cat, ...CSb_store[i_cat]], 0.5);
+        if (ref_cat_prob[i_cat] != 0) {
+          paired_cats_prob[i_cat] = NormalizeTopK(CCS_cat, 3);
+        }
+      }
+      return { ref_cat_prob, paired_cats_prob }
+      };
+
+    // ref_cat = "Andesite";
+    // ref_cat_index = cat_names.indexOf(ref_cat);
+    CS_prior = evaluateCatPrior().CS_prior;
+    ({ref_cat_prob, paired_cats_prob} = evaluateSelectionProbs(categories[1],responses[1]));
+    console.log('ref_cat_prob:', ref_cat_prob);
+    console.log('paired_cats_prob:', paired_cats_prob);
+    // ref_cat = "Andesite";
+    // ref_cat_index = cat_names.indexOf(ref_cat);
+    // var ref_cat_probs = [];
+    // var paired_cats_probs = [];
+    // CS_prior = evaluateCatPrior().CS_prior;
+    // for (let i = 0; i < 3; i++){
+    //   ({ref_cat_prob, paired_cats_prob} = evaluateSelectionProbs(categories[i],responses[i]));
+    //   console.log('paired_cats_prob:',paired_cats_prob);
+    //   ref_cat_probs.push(ref_cat_prob);
+    //   paired_cats_probs.push(paired_cats_prob[ref_cat_index]);
+    // }
+    // console.log('ref_cat_probs:', ref_cat_probs);
+    // console.log('paired_cat_probs:', paired_cats_probs);
+
+    let cat_pairing_dict = [];
+    for (let i = 0; i < num_cats; i++){
+      for (let j = 0; j < num_cats; j++){
+        if (paired_cats_prob[i] && paired_cats_prob[i][j] != 0){
+          let sym_pair_exist = cat_pairing_dict.some(obj => obj.ref_idx == j && obj.pair_idx == i);
+          if (sym_pair_exist){
+            sym_pair_index = cat_pairing_dict.findIndex(obj => obj.ref_idx == j && obj.pair_idx == i);
+            cat_pairing_dict[sym_pair_index].prob += ref_cat_prob[i] * paired_cats_prob[i][j];
+          } else {
+            cat_pairing_dict.push({ref_idx: i, pair_idx: j, prob: ref_cat_prob[i]*paired_cats_prob[i][j]});
+          }
+        }
+      }
+    }
+    pairing_idx_list = getTopKIndices(cat_pairing_dict.map(pair => pair.prob),num_SimTrial_per_blockTrain);
+    console.log(cat_pairing_dict);
+    ref_idx_list = pairing_idx_list.map(idx => cat_pairing_dict[idx].ref_idx);
+    pair_idx_list = pairing_idx_list.map(idx => cat_pairing_dict[idx].pair_idx);
+    console.log('ref_cat_list:', ref_idx_list.map(i => cat_names[i]));
+    console.log('pair_cat_list:', pair_idx_list.map(i => cat_names[i]));
+
+
+    
+  </script>
+</body>

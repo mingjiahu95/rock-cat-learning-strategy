@@ -1,0 +1,8 @@
+"width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","trial_type","trial_index","plugin_version","time_elapsed","rt","url","success","value","timeout","failed_images","failed_audio","failed_video","view_history","stimulus","response","trialType"
+"600","856","true","chrome","131.0.0","false","Linux","true","59.61","true","true","browser-check","0","2.0.0","1032","","","","","","","","","","","",""
+"","","","","","","","","","","","external-html","1","2.0.0","5168","3992","consent_form.html","","","","","","","","","",""
+"","","","","","","","","","","","fullscreen","2","2.0.0","7999","1824","","true","","","","","","","","",""
+"","","","","","","","","","","","call-function","3","2.0.0","8012","","","","{}","","","","","","","",""
+"","","","","","","","","","","","preload","4","2.0.0","8140","","","true","","false","[]","[]","[]","","","",""
+"","","","","","","","","","","","instructions","5","2.0.0","17898","9754","","","","","","","","[{""page_index"":0,""viewing_time"":1393},{""page_index"":1,""viewing_time"":7258},{""page_index"":2,""viewing_time"":1102}]","","",""
+"","","","","","","","","","","","html-button-response","6","2.0.0","19187","1285","","","","","","","","","","0","start_test"

@@ -1,0 +1,5 @@
+"width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","trial_type","trial_index","plugin_version","time_elapsed","subjID","condition","stimID","rt","url","success","value"
+"1920","953","true","chrome","130.0.0","false","Windows 10","true","145.88","false","true","browser-check","0","2.0.0","420","63f17724478948577be1d293","4","7","","","",""
+"","","","","","","","","","","","external-html","1","2.0.0","28221","63f17724478948577be1d293","4","7","23879","consent_form.html","",""
+"","","","","","","","","","","","fullscreen","2","2.0.0","32361","63f17724478948577be1d293","4","7","3123","","true",""
+"","","","","","","","","","","","call-function","3","2.0.0","32362","63f17724478948577be1d293","4","7","","","","{}"

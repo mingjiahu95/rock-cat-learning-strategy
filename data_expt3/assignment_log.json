@@ -1,0 +1,3083 @@
+{
+    "PIndex": 320,
+    "PID": "6447222db0f5274302c4c769",
+    "StimFile": ".\/data\/stim_files\/stimInfo_54.json",
+    "StimIndex": 54,
+    "CondIndex": 1,
+    "assignments": [
+        {
+            "PIndex": "P1",
+            "PID": "617452347986aeaf4d2e5278",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P2",
+            "PID": "61643eae0b4de3c67744a15f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P3",
+            "PID": "6065641fcd92b6328a54163f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P4",
+            "PID": "5d30790f326b0f0017a2a828",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P5",
+            "PID": "611edc7240c940f33a5dd554",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P6",
+            "PID": "671938533cc191ce0b9c368b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_1.json",
+            "StimIndex": 1,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P7",
+            "PID": "5f969b802a498b000aab2571",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P8",
+            "PID": "670fd04ebdeb4aba9822fd3c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P9",
+            "PID": "672f9ea5879c7e9e8a73398f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P10",
+            "PID": "5c1bf2d025bab90001f233fd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P11",
+            "PID": "6732eadcf594d35d2cd35f86",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P12",
+            "PID": "666b096ade3d4f774c629d3e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_2.json",
+            "StimIndex": 2,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P13",
+            "PID": "665a86de9e0feaeeb7f061ba",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P14",
+            "PID": "6148f6fb0d27af3991e8d01e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P15",
+            "PID": "60516195621d17646079b995",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P16",
+            "PID": "6735b2a6112cf17b7b8df8d1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P17",
+            "PID": "672e94acace1a62a2786c048",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P18",
+            "PID": "67005512302c242e2c34d34d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_3.json",
+            "StimIndex": 3,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P19",
+            "PID": "661ff00c03ba28739dd3fbef",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P20",
+            "PID": "5dd9b725954d19948f95327c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P21",
+            "PID": "67146c869c1f67dbf3180323",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P22",
+            "PID": "6647e641c0a8ef43d7412205",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P23",
+            "PID": "671fd8fc57417ecc7cff756f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P24",
+            "PID": "614f3ad3e0837475bb79d175",
+            "StimFile": ".\/data\/stim_files\/stimInfo_4.json",
+            "StimIndex": 4,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P25",
+            "PID": "66eb481a5a94ea27373200b1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P26",
+            "PID": "622a3bbca995cbb8f616a54e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P27",
+            "PID": "66311c9747a9466bf5dcf6ba",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P28",
+            "PID": "614b3d6a4f76b8dfc939adf0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P29",
+            "PID": "60d3432bc679834595ca8139",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P30",
+            "PID": "5ba855d47c0ebe0001272f70",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P31",
+            "PID": "66f0eda58aabb19b40a60936",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P32",
+            "PID": "66d5356d68b8671e3c24ecf9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P29",
+            "PID": "64dbb43e8bfa212e6da507e5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P33",
+            "PID": "5ac54531e1546900019c0487",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P30",
+            "PID": "59c25b315364260001dc4b45",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P33",
+            "PID": "65b825e5dedb5d86c0c31d3b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P29",
+            "PID": "667af0504d1a1958d5b17899",
+            "StimFile": ".\/data\/stim_files\/stimInfo_5.json",
+            "StimIndex": 5,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P34",
+            "PID": "663e4b5deaf50d8cef5ee1cb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P35",
+            "PID": "673aed1c2170608cd8f7de47",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P36",
+            "PID": "60ff330871c21d483589dda7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P37",
+            "PID": "663363b0b60a322fa3657dbf",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P38",
+            "PID": "67218c211cc126877be706cc",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P39",
+            "PID": "63f46b97140756e0178e60be",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P40",
+            "PID": "5f5127ced786f21277aa39da",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P41",
+            "PID": "63f17724478948577be1d293",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P42",
+            "PID": "6362933cc15f7c71629efee1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P43",
+            "PID": "6052961c99d0779f4f953050",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P44",
+            "PID": "5e41d41c6b5ac80775e6cd5c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P45",
+            "PID": "66622736b3fcb6b8f3c04fdd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P46",
+            "PID": "673b439b4c9758dc0048ace1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P47",
+            "PID": "5c2965d11c8e4c0001b309b7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P48",
+            "PID": "5dd6d370194e486498e13ab6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P49",
+            "PID": "66af5de74d6ff97799fee03e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P41",
+            "PID": "66c8f928d8ff66dbe5b9d119",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P50",
+            "PID": "562a8b949e2b900012006e88",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P49",
+            "PID": "6718367356f7417faba214b3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P51",
+            "PID": "6111852fd2fdb6fa7cb78ce6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P52",
+            "PID": "671276e78f4d5a8f94eec79a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P53",
+            "PID": "5b0fa626bd9c310001568d6c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P54",
+            "PID": "5611f6dd7ffc8a00058117e7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_9.json",
+            "StimIndex": 9,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P55",
+            "PID": "5e767774d5274000082f5582",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P56",
+            "PID": "67347d8b1384d96ae2d1b0c5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P57",
+            "PID": "562a8b949e2b900012006e88",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P58",
+            "PID": "5fd6b6fbbf40a261f6bc3056",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P59",
+            "PID": "6609a35ed745fef53c0c1034",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P59",
+            "PID": "61157c07de691d20146a10e7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P60",
+            "PID": "60f4a8cec0899207895635cb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P61",
+            "PID": "66a93f83fc9fcb1959191d2b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P62",
+            "PID": "67177dc558c22e03d6799712",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P63",
+            "PID": "67373b81834499a073b86c6e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P64",
+            "PID": "6716dbd9972460c6b51bffc5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P65",
+            "PID": "6172cf92f2ea6613f717abb6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P66",
+            "PID": "62878aaca0be0ca1e7a3e553",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P67",
+            "PID": "60ee4bb7de4352af0286e091",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P68",
+            "PID": "651ad403421d2fff5bb7df09",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P69",
+            "PID": "6699b7e8a3fa22647d9ea5c3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P70",
+            "PID": "5dee8ee31255595293a9906b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P71",
+            "PID": "6732593eff011c52764cee0f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P72",
+            "PID": "590eb4006d77630001d3a28a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P73",
+            "PID": "67351c705a5fbf628dd4f1d6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P70",
+            "PID": "66ac79e1dec4cf4a59685054",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P74",
+            "PID": "64e8a63d30b3b5fbf590c6a7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P75",
+            "PID": "5815369b94ecc900010b014e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P44",
+            "PID": "64d518b2a5e95098500a176c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P76",
+            "PID": "66ebb2aca14439680389f89b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P41",
+            "PID": "66ebb2aca14439680389f89b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P41",
+            "PID": "67364410628f9ca5ea1ae1c2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P69",
+            "PID": "67347d8b1384d96ae2d1b0c5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P76",
+            "PID": "663d19e59cd1e42ebc5df4db",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P65",
+            "PID": "65eba4518da362a6dcc2c3a1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_11.json",
+            "StimIndex": 11,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P67",
+            "PID": "5c796f4b4855980016a15557",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P41",
+            "PID": "5a00a8160fff620001a6b776",
+            "StimFile": ".\/data\/stim_files\/stimInfo_7.json",
+            "StimIndex": 7,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P44",
+            "PID": "5a6032228e625900017657f4",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P44",
+            "PID": "663a63f7d07fee78a65a31a6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_8.json",
+            "StimIndex": 8,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P71",
+            "PID": "673697285ddcc30a6c648f79",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P77",
+            "PID": "673585f304c70a09cead4900",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P78",
+            "PID": "6163abe84640981d685a57f2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P79",
+            "PID": "5a0d9553fe645f0001e9f852",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P80",
+            "PID": "6718eac248976eb878924520",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P81",
+            "PID": "667f52753697ee3c2bdb9976",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P82",
+            "PID": "57d02ffb596f5d0001df741f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P83",
+            "PID": "66ca332e94754270be72c08f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P84",
+            "PID": "66e8aa1649e4c1536e77c5a7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P85",
+            "PID": "5d75c56a52c89d0017df611c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P86",
+            "PID": "5ffd2c0699c3912436845113",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P87",
+            "PID": "6684ae113a46328598e5effd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P88",
+            "PID": "5f6a47e882e9cd0e1d6bbb8a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P89",
+            "PID": "5de7d12c26dd95000b6824c5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P90",
+            "PID": "66456ef29dcbac0c77e64bf2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P80",
+            "PID": "5aee513f3606ab0001b92b29",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P91",
+            "PID": "562eb896733ea000051638c6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P92",
+            "PID": "633f5252efab6885fedfad7d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P93",
+            "PID": "6703aeb136ffd366f9c531d4",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P74",
+            "PID": "67097f0092142ae824cb6afa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_13.json",
+            "StimIndex": 13,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P94",
+            "PID": "671f6b77962ddec1fbb955e5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P36",
+            "PID": "67393dc53374d981ed712119",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P36",
+            "PID": "6556e5fa9feed5dca96b6dcd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P67",
+            "PID": "5db598f48cf15c000b57eb36",
+            "StimFile": ".\/data\/stim_files\/stimInfo_12.json",
+            "StimIndex": 12,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P88",
+            "PID": "60fdf18884991b2263f75eec",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P95",
+            "PID": "65ee8cf661281c8eccd37fd0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P96",
+            "PID": "645e4f49d473048703d162cb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_16.json",
+            "StimIndex": 16,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P97",
+            "PID": "646633f7c6264a9a636042d8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P98",
+            "PID": "66e49dafbf9165764e7229ef",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P97",
+            "PID": "670d0152550cbd15e8f278e2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P99",
+            "PID": "6600214d71ce9b3918064857",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P100",
+            "PID": "5c284ae48e845b0001fc40aa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P36",
+            "PID": "6556e5fa9feed5dca96b6dcd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_6.json",
+            "StimIndex": 6,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P101",
+            "PID": "6633e68c74f4d23c9ccb9c9a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P87",
+            "PID": "6133a95623ae6ddc6ee4d53f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P87",
+            "PID": "646633f7c6264a9a636042d8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P87",
+            "PID": "6365b39d456c37b91bf98540",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P80",
+            "PID": "60ff58f2c619f3476d7b50fa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_14.json",
+            "StimIndex": 14,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P87",
+            "PID": "612418efcbd64f685703e8a4",
+            "StimFile": ".\/data\/stim_files\/stimInfo_15.json",
+            "StimIndex": 15,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P102",
+            "PID": "593890eac6aa16000101f037",
+            "StimFile": ".\/data\/stim_files\/stimInfo_17.json",
+            "StimIndex": 17,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P103",
+            "PID": "66c3dfeeebce955a71524f5a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P104",
+            "PID": "660ff598a3391e9b7d8feab4",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P105",
+            "PID": "5f32e865bd94490a64d9c9f5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P106",
+            "PID": "63d156100e702f67d226f892",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P107",
+            "PID": "655b69652f36b1478b77b436",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P108",
+            "PID": "62d2aee15e1dc6709bdcace0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P109",
+            "PID": "670e3e1821e1e62133cfe0a9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P108",
+            "PID": "66d74b9d2a9bfcaf3ddbe8a3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P110",
+            "PID": "5f36e3d19ff99d12681ffca7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P111",
+            "PID": "60bae1ebe45be85442acce84",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P112",
+            "PID": "669a34b9a8f5a340ccb22fc6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P113",
+            "PID": "66e4bf7868bc6f68b6154b91",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P114",
+            "PID": "60fc2ec58ad0da367daee3c1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P115",
+            "PID": "66327a37b492ebe7bdaa5f69",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P116",
+            "PID": "5c2e693a86a578000141ca47",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P117",
+            "PID": "5bd7cde93dac81000124bb7b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P112",
+            "PID": "5904f5ca56cdc40001bc5629",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P118",
+            "PID": "6466190f0491049a32d5b0fc",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P119",
+            "PID": "57598aa528976b0006c15631",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P120",
+            "PID": "59349d79f1b3f00001964d04",
+            "StimFile": ".\/data\/stim_files\/stimInfo_20.json",
+            "StimIndex": 20,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P104",
+            "PID": "663922bf1ff7589784c76f51",
+            "StimFile": ".\/data\/stim_files\/stimInfo_18.json",
+            "StimIndex": 18,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P121",
+            "PID": "63c40b98533b26ec941005c3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P122",
+            "PID": "5db06709e8d5b50019c3bd88",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P123",
+            "PID": "66ba7dea255d9599c5c0da4e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P124",
+            "PID": "66aa67e1fb6c20fb6beae30e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P122",
+            "PID": "62b07a6728903d01b9796889",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P125",
+            "PID": "5806ceacf0740c00017892c8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P126",
+            "PID": "66706a23c37c6099480f039d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P127",
+            "PID": "5fd0261b85dd3e087609bee6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P128",
+            "PID": "6657f15cef4ca4b8c204a8fd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P129",
+            "PID": "668a1359a9a5254e57f85222",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P130",
+            "PID": "6739c88ea4434c34f877b43b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P113",
+            "PID": "67088d930602f070f43a8675",
+            "StimFile": ".\/data\/stim_files\/stimInfo_19.json",
+            "StimIndex": 19,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P131",
+            "PID": "60121fca666552254559110d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P132",
+            "PID": "64d53aae0f3f7317f6eb617e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P128",
+            "PID": "66ef212cf79668f34be612d8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P121",
+            "PID": "66b4d2ee1ac8c5e9060a6930",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P130",
+            "PID": "6544fd4daeb0e81889e217f7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P133",
+            "PID": "55b3120cfdf99b6ef6263a71",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P134",
+            "PID": "6683fb33cc602af8407e62e9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P135",
+            "PID": "5ba1beaecc5dd00001673e39",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P136",
+            "PID": "647652cb5644044df439e1fb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P127",
+            "PID": "5fb0a3d6a8e4224b973e750b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P127",
+            "PID": "651eea44194fa8c200606af7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_22.json",
+            "StimIndex": 22,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P137",
+            "PID": "6643a72b8bbc62751f1c69b3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P138",
+            "PID": "62e0532289a4e5d9fedadde1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P139",
+            "PID": "64d50c4b3a44318d98f4f5b2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P140",
+            "PID": "5ba5d8b960f3d50001697104",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P141",
+            "PID": "66696c2b8740c3864590e2c2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P142",
+            "PID": "660f2fbd807c8d51f0673ec5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P143",
+            "PID": "664521e03117b782ed4fff45",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P144",
+            "PID": "66a9488e6e3cb9f8b0dff105",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P145",
+            "PID": "62e02660c3ef175825ab7655",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P146",
+            "PID": "6566391df297b5d5a039e4e5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P147",
+            "PID": "662190146ef67bab626e48cb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P148",
+            "PID": "5e41a52038926b03b5357afb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P149",
+            "PID": "55eb04337480920010aa9e0d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P150",
+            "PID": "5694e7b5e0c800000b5a3841",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P151",
+            "PID": "614f571879ee135c5a579e08",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P152",
+            "PID": "663eed67d4b7867ab8b258ac",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P153",
+            "PID": "67143d69d010fd19ac3a1e06",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P154",
+            "PID": "6619a6b7ce5da964c6d15b4d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P155",
+            "PID": "5c65feca0d7f5f00014b853d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P156",
+            "PID": "66ac3dbee15ba2ca0996f1e5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P157",
+            "PID": "631ad5df2dfd6aff965bba6a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P158",
+            "PID": "633f4f203450d46b01e3d16b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P159",
+            "PID": "6736aaf79268c6121b012a63",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P160",
+            "PID": "658a8d7d92db39c7d5c8d69b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P161",
+            "PID": "66a57a8aa709312db9ddd8b2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P162",
+            "PID": "673350bbb92b09a7fbbb2f3f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P163",
+            "PID": "632b9d9bc38454f47019295c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P138",
+            "PID": "660ab3521d6a9f36a3f0cb95",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P138",
+            "PID": "5f01d812e83c5732b0dd15e6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P164",
+            "PID": "6604276e62cf4a8392d9a5eb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P165",
+            "PID": "672fd1f528f9a30806ac74b8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P166",
+            "PID": "66c9f7fd98cb4c8f77f98b27",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P167",
+            "PID": "66d1acabe75fc3f59ec0fb4b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P168",
+            "PID": "672fd1f528f9a30806ac74b8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P169",
+            "PID": "66495b83f9f5ed828568503f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P148",
+            "PID": "663a722d7e8c2b7e771bd95c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_25.json",
+            "StimIndex": 25,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P170",
+            "PID": "665f930d862dcdc6bfde540e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P141",
+            "PID": "65e68fb1a21db3bbe1cfd991",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P167",
+            "PID": "669a90feda82b881fc296656",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P171",
+            "PID": "671fca7287fb225453006af0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P172",
+            "PID": "5e4c0ba01ae5a4000b539387",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P171",
+            "PID": "671fca7287fb225453006af0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P141",
+            "PID": "66eca7c326eed8fbf33a7b93",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P144",
+            "PID": "5c56964991c0ad0001cfa5ae",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P144",
+            "PID": "66d7b253c64eb18aa549d79c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P140",
+            "PID": "66d1acabe75fc3f59ec0fb4b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P173",
+            "PID": "671c91e9c094bf3aa2525cc7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P174",
+            "PID": "662f93c33fe9ba41a6319363",
+            "StimFile": ".\/data\/stim_files\/stimInfo_29.json",
+            "StimIndex": 29,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P175",
+            "PID": "6711602fe81fc6cf620cecff",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P176",
+            "PID": "63c40b98533b26ec941005c3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P177",
+            "PID": "6681e33afffa5fd6c6bf5e06",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P144",
+            "PID": "66e7853b4e311a12f93b5411",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P178",
+            "PID": "670e94aed6adc76de581775a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P179",
+            "PID": "67022b62378fdf9d7675d86d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P121",
+            "PID": "6598ad7d742e25b376094227",
+            "StimFile": ".\/data\/stim_files\/stimInfo_21.json",
+            "StimIndex": 21,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P138",
+            "PID": "66bfd4b46a7e9cec65d88461",
+            "StimFile": ".\/data\/stim_files\/stimInfo_23.json",
+            "StimIndex": 23,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P180",
+            "PID": "6638d4e576c0a53f8aa1b9e4",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P181",
+            "PID": "5fd7782dee03dc08d3f3f491",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P182",
+            "PID": "671309eee1f4753b1cdeed82",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P183",
+            "PID": "66295cf0dbecaeeb1cddb852",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P184",
+            "PID": "5ef981cf234db67251c1e0d7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P156",
+            "PID": "67292889cf249b052c5f6667",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P156",
+            "PID": "600be42e32909325b20ab5f0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P156",
+            "PID": "633dbba020f607c3522b86ed",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P185",
+            "PID": "67292889cf249b052c5f6667",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P186",
+            "PID": "5d617ba9364f9a0019f1dac3",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P187",
+            "PID": "6572144253ae69f2c700c9a9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P188",
+            "PID": "66c37d71278acb17d12bc77e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P189",
+            "PID": "576ad50bc8a90000010d99c8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P190",
+            "PID": "653f2424042d03012eb92ef5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P141",
+            "PID": "666fb6f24d1c14f333eb4a0a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_24.json",
+            "StimIndex": 24,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P191",
+            "PID": "6700913b83a64ec85e20319a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P180",
+            "PID": "61528277afcb4906d01e0442",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P180",
+            "PID": "67266c0ecff4ab3acc3b5a54",
+            "StimFile": ".\/data\/stim_files\/stimInfo_30.json",
+            "StimIndex": 30,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P192",
+            "PID": "66d88375799e00b593a8655f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P193",
+            "PID": "66463e4efb99fba5a67a010a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P194",
+            "PID": "63c0a40fed93c574b9ec5643",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P195",
+            "PID": "5b233660648d5b0001b7de87",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P196",
+            "PID": "5d7ff85ffec5620017b07c40",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P197",
+            "PID": "5d0a8a22c0fd80001626e38d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P198",
+            "PID": "66ecc419237d4dc3e627477c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P199",
+            "PID": "652abcf9a639f4cb5c294233",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P200",
+            "PID": "668545bb7810640d0a057f0f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P201",
+            "PID": "66358a9d8097a16fa815976f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P202",
+            "PID": "65584073cce140ca87d895ff",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P203",
+            "PID": "55d234b45bc5bc0005d9039d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P204",
+            "PID": "673283d7abe9b4f50b28637e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P205",
+            "PID": "5f16f559325a640008bb9a07",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P206",
+            "PID": "5f9b96ecd60b7a3d0c62e917",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P186",
+            "PID": "671fa09e15ebe028cdf11d91",
+            "StimFile": ".\/data\/stim_files\/stimInfo_31.json",
+            "StimIndex": 31,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P207",
+            "PID": "6572144253ae69f2c700c9a9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P208",
+            "PID": "66d8756e02481db4bcdd0769",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P209",
+            "PID": "66ccbb7d4109382e498e3c82",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P210",
+            "PID": "6074b929f753216d88c77e88",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P211",
+            "PID": "66946e3054a30a2bf5b1be40",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P159",
+            "PID": "66dc4fbb86ca1a3b6ddd794b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P159",
+            "PID": "5f50b1bbe29c992335098fb1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_27.json",
+            "StimIndex": 27,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P187",
+            "PID": "6572144253ae69f2c700c9a9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_32.json",
+            "StimIndex": 32,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P212",
+            "PID": "665e49f8cb0ef6119208507d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P213",
+            "PID": "6640f35c85a23b3f7db3c08f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P208",
+            "PID": "663cd0ab9a13d177b358f8f1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P214",
+            "PID": "672ff35fc68be1c3a2a49e58",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P215",
+            "PID": "66358a9d8097a16fa815976f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P201",
+            "PID": "66d8756e02481db4bcdd0769",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P216",
+            "PID": "646c323d73a3844a4331e09b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P217",
+            "PID": "66a005727145a4b4a60ba5d8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P218",
+            "PID": "6720f4ced2a11d4e702566fa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P202",
+            "PID": "6478e5fc76f5ecbc4f0ed353",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P202",
+            "PID": "667ab64e047d4032dcc8be52",
+            "StimFile": ".\/data\/stim_files\/stimInfo_34.json",
+            "StimIndex": 34,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P198",
+            "PID": "5c09a1171907db0001602601",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P198",
+            "PID": "66f0bbf2ad2ccf85f492cbcb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_33.json",
+            "StimIndex": 33,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P217",
+            "PID": "66dc48cea9a85fe230c06b5f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P217",
+            "PID": "6700d6aca79c6b2534f6292c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P156",
+            "PID": "6575fb1c1a04b30cfb2832d5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P156",
+            "PID": "66f0bbf2ad2ccf85f492cbcb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_26.json",
+            "StimIndex": 26,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P59",
+            "PID": "671fe603bbfcd567cd1e0313",
+            "StimFile": ".\/data\/stim_files\/stimInfo_10.json",
+            "StimIndex": 10,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P165",
+            "PID": "6633ff088a92287249f6968c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_28.json",
+            "StimIndex": 28,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P208",
+            "PID": "5a511223ac5624000153583f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_35.json",
+            "StimIndex": 35,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P215",
+            "PID": "66efa54508a57ab4d42cab20",
+            "StimFile": ".\/data\/stim_files\/stimInfo_36.json",
+            "StimIndex": 36,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P219",
+            "PID": "61474a17f798ccc4e40383da",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P220",
+            "PID": "66b63998f8c32bf55f1ebc27",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P221",
+            "PID": "577d11f88b3e2300016d74a0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P222",
+            "PID": "66505efb53953d2da6e1a8cd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P223",
+            "PID": "669ecaf71fc12b3e8b8cd191",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 1
+        },
+        {
+            "PIndex": null,
+            "PID": "627809c52874925390a423a6",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": "P224",
+            "PID": "60c57903a2db0249ed2779b1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P225",
+            "PID": "66cc3b9b7ef75ad97e912027",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 3
+        },
+        {
+            "PIndex": null,
+            "PID": "627809c52874925390a423a6",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "66a59fe205982fe081910040",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "627809c52874925390a423a6",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": "P226",
+            "PID": "668180f26a3b162091510589",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P227",
+            "PID": "60f32eb8d0fa43b7850ae16b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 4
+        },
+        {
+            "PIndex": null,
+            "PID": "66a59fe205982fe081910040",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "627809c52874925390a423a6",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "66d1cb895c001e31788258ca",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "627809c52874925390a423a6",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": "P228",
+            "PID": "655fa181e4a69a513fd68aa0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P229",
+            "PID": "6681a4d12c54df1452c59833",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 1
+        },
+        {
+            "PIndex": null,
+            "PID": "673cfddc2603281edb50447e",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": "P230",
+            "PID": "65f22e728039424910f7eaa8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P231",
+            "PID": "66d1cb895c001e31788258ca",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P232",
+            "PID": "614f297777d0d8f5e2a5b354",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P233",
+            "PID": "673ce3ecb30b0063a1321f66",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P234",
+            "PID": "663bd7283874900d3cfa6efd",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P235",
+            "PID": "67083dadb0e6f2e304a38a21",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P236",
+            "PID": "66e9d5a253706d5ba625cf80",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P237",
+            "PID": "58880987bc9f1900014879c6",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P238",
+            "PID": "663fcdfa0a379f42f4c7397e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P239",
+            "PID": "66dca89db8837080fa1a725c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P240",
+            "PID": "667eb91e3db4b82021840853",
+            "StimFile": ".\/data\/stim_files\/stimInfo_40.json",
+            "StimIndex": 40,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P241",
+            "PID": "63e5517cd738b83025348a43",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P232",
+            "PID": "663a71833186f44039c05a68",
+            "StimFile": ".\/data\/stim_files\/stimInfo_39.json",
+            "StimIndex": 39,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P242",
+            "PID": "5a0bf53d728b1b0001ad95ad",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P243",
+            "PID": "60bcffb205c73cc151d61c8c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P244",
+            "PID": "664223ef24fe120dff73fc82",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P245",
+            "PID": "65996217ff76317c84f8aa6e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P246",
+            "PID": "65ecbbfd7c441da2b07a6faa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P247",
+            "PID": "67106e2b92ed66266c984d36",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P248",
+            "PID": "6228f5900f303f54ca6ab186",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P249",
+            "PID": "62fbd2c1d97aa039e9466d81",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P222",
+            "PID": "5e5220711b676824eb24c172",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P222",
+            "PID": "66c2356667d16c9e1ea9a612",
+            "StimFile": ".\/data\/stim_files\/stimInfo_37.json",
+            "StimIndex": 37,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P250",
+            "PID": "66d9b6042ad7fd7890e06ae5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P251",
+            "PID": "672fe15ff310043c985e09fa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P252",
+            "PID": "670efc8f27af6732888de1d8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_42.json",
+            "StimIndex": 42,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P253",
+            "PID": "670feba2e636f738625aa72d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P254",
+            "PID": "667c732c4bbadc60b6a72bee",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P255",
+            "PID": "6666556a57f997a0004f5e5a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P256",
+            "PID": "672fe1481ba8b290765e0a76",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P257",
+            "PID": "5ef246c6d2b9060809858e7e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P258",
+            "PID": "65996217ff76317c84f8aa6e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P245",
+            "PID": "6042485be854a50b567878ab",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P259",
+            "PID": "65996217ff76317c84f8aa6e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P260",
+            "PID": "66a9979ad8c56c6f29446781",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P261",
+            "PID": "668b9ef3f88084c4945bc24d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P243",
+            "PID": "673240f46fb182e8bc246ded",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P262",
+            "PID": "62728884995a1a76605d0214",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P263",
+            "PID": "6648a6c3e5a0dcc0647abd81",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P264",
+            "PID": "66c55df6f9a7030edff41d5a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P265",
+            "PID": "659584067824b64f084b6c76",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P266",
+            "PID": "672ef4b87576e39bf4a023b8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P267",
+            "PID": "672ef4b87576e39bf4a023b8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P245",
+            "PID": "66a7fe579f334f72a2b3e59c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P245",
+            "PID": "63f049c2d78b2bc822a16dac",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P263",
+            "PID": "6705f9372b81e6f4e1e195df",
+            "StimFile": ".\/data\/stim_files\/stimInfo_44.json",
+            "StimIndex": 44,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P268",
+            "PID": "665762fdab6df18f5032505b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P268",
+            "PID": "62c44d672834a5c5ce7362f1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P269",
+            "PID": "6496f9fbc2928ee6956ef623",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P270",
+            "PID": "5ffb8c5b60571908f3ac19fa",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P271",
+            "PID": "672f61c0e551b93afb8cf779",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P272",
+            "PID": "61577cfb758541d9e85d5d4e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P273",
+            "PID": "671fed5db8abfa3e54928141",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P274",
+            "PID": "65429041aa9bde9216c53dc2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P275",
+            "PID": "672f62bfadeed82594666b53",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P276",
+            "PID": "65df3ad0dafce042084ed632",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P277",
+            "PID": "671322ae5b5def60f8528351",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P278",
+            "PID": "6127c369bdff7dc17f0724a2",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P279",
+            "PID": "669ef3638f06504e173dc2f7",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P280",
+            "PID": "67106a0165cd9ad00af23096",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P271",
+            "PID": "5d4b033469a77b0018f65b19",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P270",
+            "PID": "65f0f44f1cae5992a2cc2c8b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P270",
+            "PID": "66ac261efa487682e38c3024",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P271",
+            "PID": "66cf5d2817623ac399e0586f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P245",
+            "PID": "66bbc95713288ad8d1e8578d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_41.json",
+            "StimIndex": 41,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P280",
+            "PID": "67106a0165cd9ad00af23096",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P281",
+            "PID": "5f765a3c8a6ec010370c9cc1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P268",
+            "PID": "6516e4bf9463264599a746f9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_45.json",
+            "StimIndex": 45,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P282",
+            "PID": "612cd21ab53f52338b7b4f19",
+            "StimFile": ".\/data\/stim_files\/stimInfo_47.json",
+            "StimIndex": 47,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P283",
+            "PID": "671c8f6c5e23f895f7fa8bae",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P284",
+            "PID": "65c25cf77dca9d7ca7d9ebdb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P285",
+            "PID": "62e19208352cd518d7b2f085",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P286",
+            "PID": "62fbdda6e4b5a034b71296f8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P287",
+            "PID": "63d9f41910c61f3eb102079f",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P288",
+            "PID": "63ea4f9fe0e6a3c7a08e3ffc",
+            "StimFile": ".\/data\/stim_files\/stimInfo_48.json",
+            "StimIndex": 48,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P289",
+            "PID": "659d779096ebe05ecca2ebce",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P290",
+            "PID": "671c9619b8a112b42f2e0315",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P291",
+            "PID": "671322ae5b5def60f8528351",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P292",
+            "PID": "66c8fab96f03e9e47bd704c8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P292",
+            "PID": "6727c22184ffd5e4d5c3afad",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P276",
+            "PID": "671c9619b8a112b42f2e0315",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P276",
+            "PID": "63c3068bd61c16717eeea2e5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_46.json",
+            "StimIndex": 46,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P292",
+            "PID": "65c0f99b71fb575465c6ca0d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P293",
+            "PID": "570d22b35e5156000efd8bd5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P294",
+            "PID": "6503144f9a10397111eb3eb9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P295",
+            "PID": "654673a478fa48783a0ad5bc",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P296",
+            "PID": "66461dfd1eb6453139b1db4c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P297",
+            "PID": "5ec17a2e02be030625eaff6e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P298",
+            "PID": "6623c2d90a82fd868b678094",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P299",
+            "PID": "67306f1f38287499d8a02319",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P300",
+            "PID": "66293ce3dba0764775195e58",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P301",
+            "PID": "66106cb0a3498a31bbf902c1",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P302",
+            "PID": "6640be7edc706d4622dbab1c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P303",
+            "PID": "666359d51e208f9165a348a8",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P304",
+            "PID": "6716f817aed3929d27448d97",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P305",
+            "PID": "671bf57baf2c2374636a8c4d",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P306",
+            "PID": "671c8a1fe7a5cd2edc846675",
+            "StimFile": ".\/data\/stim_files\/stimInfo_51.json",
+            "StimIndex": 51,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P307",
+            "PID": "66e8648522905b612ef32882",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P308",
+            "PID": "67322550bd5dfa0cd2958366",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P309",
+            "PID": "63052f20afc39e87110eb83e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P310",
+            "PID": "663a7af013938e6bbfb065d5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P311",
+            "PID": "672d4ccff9372d646bbd16ba",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P312",
+            "PID": "66c2382c6e08f5c40d267214",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P313",
+            "PID": "67131b8bef325ea544a658d0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P314",
+            "PID": "665dd4ef9ba81d499d675de5",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P315",
+            "PID": "6637b21240220c2517fffa1a",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P316",
+            "PID": "55acf681fdf99b3d5b2ab68c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P293",
+            "PID": "67106cb161d9d035cb82b45b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_49.json",
+            "StimIndex": 49,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P314",
+            "PID": "62c5cdfe50000fce3e390be0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P298",
+            "PID": "60b96835d5cbb2261c7fd22c",
+            "StimFile": ".\/data\/stim_files\/stimInfo_50.json",
+            "StimIndex": 50,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P307",
+            "PID": "66c30da59470c6be1190450b",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 1
+        },
+        {
+            "PIndex": null,
+            "PID": "66c54c2e0d0077be10503ceb",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "6543abae80e7381457fa60cb",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": null,
+            "PID": "6543abae80e7381457fa60cb",
+            "StimFile": null,
+            "StimIndex": null,
+            "Cond": null
+        },
+        {
+            "PIndex": "P314",
+            "PID": "62c5cdfe50000fce3e390be0",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 2
+        },
+        {
+            "PIndex": "P317",
+            "PID": "6543abae80e7381457fa60cb",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P318",
+            "PID": "66f0c2c17d872e5874877985",
+            "StimFile": ".\/data\/stim_files\/stimInfo_53.json",
+            "StimIndex": 53,
+            "Cond": 4
+        },
+        {
+            "PIndex": "P226",
+            "PID": "66fc0d1538357d2081dda6b9",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P256",
+            "PID": "5e1508eb18e869b078576e94",
+            "StimFile": ".\/data\/stim_files\/stimInfo_43.json",
+            "StimIndex": 43,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P310",
+            "PID": "6716d6664094604c63d0f54e",
+            "StimFile": ".\/data\/stim_files\/stimInfo_52.json",
+            "StimIndex": 52,
+            "Cond": 3
+        },
+        {
+            "PIndex": "P319",
+            "PID": "6447222db0f5274302c4c769",
+            "StimFile": ".\/data\/stim_files\/stimInfo_54.json",
+            "StimIndex": 54,
+            "Cond": 1
+        },
+        {
+            "PIndex": "P226",
+            "PID": "66908eecc135ec77905c2810",
+            "StimFile": ".\/data\/stim_files\/stimInfo_38.json",
+            "StimIndex": 38,
+            "Cond": 3
+        }
+    ],
+    "quit_assignments": []
+}

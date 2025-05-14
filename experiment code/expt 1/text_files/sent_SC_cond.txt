@@ -1,0 +1,1 @@
+These are examples of the rocks you will learn to classify.\nOn each trial, you will use the mouse to click on one of the\nrocks that you want to learn about.  
